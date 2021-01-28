@@ -1,0 +1,47 @@
+Request Headers
+User-Agent: PostmanRuntime/7.26.10
+Accept: */*
+Postman-Token: 4bfbf58b-1639-4dd7-9126-05d746c5d75f
+Host: www.googleapis.com
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+▶
+Response Headers
+Content-Type: application/json; charset=UTF-8
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+Content-Encoding: gzip
+Date: Thu, 28 Jan 2021 00:37:30 GMT
+Server: ESF
+Cache-Control: private
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3-29=":443"; ma=2592000,h3-T051=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Transfer-Encoding: chunked
+
+————————————————————————————————————————————
+
+User-Agent will give the details on the client that initiated the request
+Accept: This is accepting all types
+Postman-Token is showing the token that was sent from Postman
+Host is googleapis.com, hosting the request
+Accept-Encoding will let us know which compressing method is okay to use
+Connection is being kept alive
+
+Content-type is letting us know that this is a json application using the UTF-8 character set
+3 Vary response headers letting us know that origin, x-origin, and referer were used as representation for the resources 
+Content-Encoding is gzip, 32 bit compression 
+Date is time-stamping the request and response messages
+Server is showing us that the software used for this was ESF
+Cache-Control: private so the response is only being stored by the brokers cache
+X-XSS-Protection 0 is being used to disable XSS filtering
+X-Frame-Options is set to same origin so that the page can only be displayed in the same origin (I am assuming just postman)
+X-Content-Type-Options: nosniff is blocking style and script mime request types that are not text/css or javascript respectively
+Alt-syc: advertising services that can reach the same resources. Done with the linked protocol/host/port combination
+Transfer-Encoding: chunked is saying that the data needs to be chunked because of it’s size
+
+Sources for most definitions of headers:
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/
+Video lecture and HTTP slideshow from class
